@@ -461,431 +461,128 @@ footer{
 
 /* ===================== TABLET ====================== */
 
-@media (max-width:768px){
-
-body{
-    padding:32px 16px 60px;
-}
-
-.stage{
-    width:100%;
-    max-width:100%;
-}
-
-/* ---------- Logo ---------- */
-
-.fob{
-    width:82px;
-    height:108px;
-}
-
-.logo-img{
-    width:68px;
-    height:68px;
-    top:28px;
-}
-
-/* ---------- Hero ---------- */
-
-.hero{
-    width:100%;
-    padding:28px 22px 30px;
-    border-radius:16px;
-}
-
-h1{
-    font-size:52px;
-}
-
-h1 span{
-    font-size:20px;
-}
-
-.stars{
-    font-size:18px;
-    margin:18px 0;
-}
-
-.thanks{
-    max-width:100%;
-    font-size:15px;
-    line-height:1.8;
-}
-
-.directory-label{
-    margin:20px 0 14px;
-    font-size:11px;
-}
-
-/* ---------- Review ---------- */
-
-.board{
-    border-radius:16px;
-}
-
-.entry{
-    padding:15px 18px;
-    gap:14px;
-}
-
-.entry:hover{
-    padding-left:22px;
-}
-
-.entry .plate{
-    width:42px;
-    height:42px;
-}
-
-.entry .plate img{
-    width:30px;
-    height:30px;
-}
-
-.entry .info .name{
-    font-size:20px;
-}
-
-.entry .info .hint{
-    font-size:11px;
-}
-
-.entry .arrow{
-    font-size:18px;
-}
-
-/* ---------- Booking ---------- */
-
-.booking-icons{
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:14px;
-
-    margin-top:8px;
-}
-
-.booking-card{
-
-    height:118px;
-
-    padding:12px;
-
-}
-
-.booking-logo{
-
-    width:48px;
-    height:48px;
-
-}
-
-.booking-logo img{
-
-    width:34px;
-    height:34px;
-
-}
-
-.booking-name{
-
-    font-size:12px;
-
-}
-
-/* ---------- Footer ---------- */
-
-footer{
-
-    margin-top:28px;
-
-    text-align:center;
-
-    font-size:12px;
-
-    line-height:1.6;
-
-    letter-spacing:.12em;
-
-}
-
-}
-
-/* ===================== MOBILE ====================== */
-
 @media (max-width:480px){
 
 body{
-
-    padding:16px 18px 40px;
-
+    padding:14px 12px 26px;
 }
 
 .stage{
-
-    width:100%;
-
+    width:min(100%,360px);
+    max-width:none;
+    margin:auto;
 }
 
-/* ---------- Logo ---------- */
+/* Logo */
 
 .fob{
-
-    width:60px;
-    height:82px;
-
+    width:52px;
+    height:70px;
 }
 
 .logo-img{
-
-    width:48px;
-    height:48px;
+    width:40px;
+    height:40px;
     top:16px;
-
 }
 
-/* ---------- Hero ---------- */
+/* Hero */
 
 .hero{
-
-    width:100%;
-
-    padding:18px 16px 20px;
-
-    border-radius:14px;
-
+    padding:14px 12px 16px;
+    border-radius:12px;
 }
 
 h1{
-
-    font-size:32px;
-
+    font-size:26px;
+    line-height:1.05;
 }
 
 h1 span{
-
-    font-size:14px;
-
-    letter-spacing:.18em;
-
+    font-size:12px;
+    letter-spacing:.14em;
 }
 
 .stars{
-
-    font-size:15px;
-
-    margin:16px 0;
-
+    margin:10px 0;
+    font-size:13px;
 }
 
 .thanks{
-
-    font-size:13px;
-
-    line-height:1.65;
-
+    font-size:12px;
+    line-height:1.6;
 }
 
 .directory-label{
-
-    margin:18px 0 12px;
-
-    font-size:10px;
-
-    letter-spacing:.28em;
-
+    margin:12px 0 9px;
+    font-size:9px;
 }
 
-/* ---------- Review ---------- */
+/* Review */
 
 .board{
-
-    border-radius:14px;
-
+    border-radius:12px;
 }
 
 .entry{
-
-    padding:12px;
-
-}
-
-.entry:hover{
-
-    padding-left:18px;
-
+    padding:10px 10px;
+    gap:8px;
 }
 
 .entry .plate{
-
-    width:40px;
-    height:40px;
-
+    width:32px;
+    height:32px;
 }
 
 .entry .plate img{
-
-    width:28px;
-    height:28px;
-
+    width:22px;
+    height:22px;
 }
 
 .entry .info .name{
-
-    font-size:18px;
-
+    font-size:15px;
 }
 
 .entry .info .hint{
-
-    font-size:10px;
-
+    font-size:9px;
 }
 
 .entry .arrow{
-
-    font-size:17px;
-
+    font-size:14px;
 }
 
-/* ---------- Booking ---------- */
+/* Booking */
 
 .booking-icons{
-
     grid-template-columns:repeat(2,1fr);
-
-    gap:12px;
-
+    gap:10px;
 }
 
 .booking-card{
-
-    height:92px;
-
+    height:80px;
     padding:8px;
-
 }
 
 .booking-logo{
-
-    width:36px;
-    height:36px;
-
-}
-
-.booking-logo{
-
-    width:36px;
-    height:36px;
-
-}
-
-.booking-name{
-
-    font-size:11px;
-
-    white-space:normal;
-
-}
-
-/* ---------- Footer ---------- */
-
-footer{
-
-    margin-top:24px;
-
-    font-size:11px;
-
-    line-height:1.6;
-
-    letter-spacing:.08em;
-
-}
-
-}
-
-/* ===================== SMALL MOBILE ====================== */
-
-@media (max-width:360px){
-
-body{
-
-    padding:18px 12px 40px;
-
-}
-
-.hero{
-
-    padding:20px 14px;
-
-}
-
-h1{
-
-    font-size:34px;
-
-}
-
-h1 span{
-
-    font-size:15px;
-
-}
-
-.thanks{
-
-    font-size:13px;
-
-}
-
-.entry{
-
-    padding:12px;
-
-}
-
-.entry .info .name{
-
-    font-size:16px;
-
-}
-
-.entry .info .hint{
-
-    font-size:9px;
-
-}
-
-.booking-card{
-
-    height:95px;
-
-}
-
-.booking-logo{
-
-    width:38px;
-    height:38px;
-
+    width:32px;
+    height:32px;
 }
 
 .booking-logo img{
-
-    width:26px;
-    height:26px;
-
+    width:22px;
+    height:22px;
 }
 
 .booking-name{
-
-    font-size:10px;
-
+    font-size:9px;
 }
 
+/* Footer */
+
 footer{
-
+    margin-top:18px;
     font-size:10px;
-
+    letter-spacing:.06em;
 }
 
 }
