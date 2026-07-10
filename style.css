@@ -1,0 +1,469 @@
+/* ============================================================
+   THE HIMANA HOTEL — REVIEW LANDING PAGE
+   ============================================================ */
+
+/* ---------- Tokens ---------- */
+:root{
+    --maroon-dark:#3B1622;
+    --maroon:#562534;
+    --maroon-light:#744050;
+
+    --gold:#D4AF37;
+    --gold-soft:#E7C76B;
+
+    --ivory:#F8F6F2;
+    --line:rgba(212,175,55,.28);
+}
+
+/* ---------- Reset ---------- */
+*{ box-sizing:border-box; }
+html, body{ margin:0; padding:0; }
+
+/* ---------- Base / background ---------- */
+body{
+    min-height:100vh;
+    font-family:'Jost', sans-serif;
+    color:var(--ivory);
+
+    display:flex;
+    justify-content:center;
+
+    padding:56px 20px 80px;
+
+    position:relative;
+    overflow-x:hidden;
+
+    background-image:
+    linear-gradient(
+    180deg,
+    rgba(55,16,30,.34) 0%,
+    rgba(55,16,30,.38) 50%,
+    rgba(35,10,20,.52) 100%
+    ),
+    url("assets/bg.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    }
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            rgba(255,255,255,.02) 0px,
+            rgba(255,255,255,.02) 2px,
+            transparent 2px,
+            transparent 8px
+        );
+
+    pointer-events:none;
+    z-index:0;
+}
+
+
+.stage{
+  width:100%;
+  max-width:560px;
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* ============================================================
+   HERO / KEY FOB
+   ============================================================ */
+.fob-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:-6px;
+}
+
+.fob{
+    width:105px;
+    height:135px;
+
+    position:relative;
+    transform-origin:top center;
+    animation:sway 6s ease-in-out infinite;
+}
+
+@keyframes sway{
+  0%, 100%{ transform: rotate(-3deg); }
+  50%{      transform: rotate(3deg); }
+}
+
+.fob svg{
+  width:100%;
+  height:100%;
+  display:block;
+  position:relative;
+  z-index:1;
+}
+
+.logo-img{
+  position:absolute;
+  top:24px;
+  left:50%;
+  transform: translateX(-50%);
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  z-index:2;
+  display:block;
+  background:none;
+  border:none;
+  box-shadow:none;
+  padding:0;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .fob{ animation:none; }
+}
+
+/* ============================================================
+   HERO CARD
+   ============================================================ */
+.hero{
+    width:100%;
+    text-align:center;
+    padding:36px 32px 42px;
+
+    background:rgba(75,16,38,.72);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(212,175,55,.28);
+    border-radius:14px;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.30),
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+    position:relative;
+}
+
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  left:18px; right:18px;
+  height:1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity:0.6;
+}
+.hero::before{ top:10px; }
+.hero::after{ bottom:10px; }
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color: var(--gold-soft);
+  margin: 6px 0 18px;
+}
+
+h1{
+  font-family:'Cormorant Garamond', serif;
+  font-weight:600;
+  font-size: clamp(40px, 9vw, 58px);
+  line-height:1.02;
+  margin:0;
+  color:var(--ivory);
+  letter-spacing:0.01em;
+}
+
+h1 span{
+  display:block;
+  font-style:italic;
+  font-weight:500;
+  color:var(--gold-soft);
+  font-size: 0.5em;
+  margin-top:6px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+}
+
+.stars{
+  margin: 20px 0 22px;
+  letter-spacing: 6px;
+  font-size: 18px;
+  color: var(--gold);
+}
+
+.thanks{
+  font-size:15.5px;
+  line-height:1.75;
+  color: rgba(246,241,228,0.85);
+  max-width:380px;
+  margin: 0 auto;
+}
+.thanks strong{ color: var(--ivory); font-weight:500; }
+
+/* ============================================================
+   SECTION LABEL (used above both the review board and the
+   booking-platform icon row)
+   ============================================================ */
+.directory-label{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-align:center;
+  font-size:11px;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color: rgba(246,241,228,0.55);
+  margin: 34px 0 16px;
+}
+.directory-label::before,
+.directory-label::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background: var(--line);
+}
+
+/* ============================================================
+   REVIEW & SOCIAL DIRECTORY
+   ============================================================ */
+.board{
+    width:100%;
+
+    background:
+      linear-gradient(
+      180deg,
+      rgba(86,37,52,.72) 0%,
+      rgba(68,28,42,.70) 55%,
+      rgba(52,20,31,.74) 100%
+      );
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    border:1px solid rgba(212,175,55,.30);
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.board::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255,255,255,.05),
+            transparent 55%
+        );
+}
+
+.board{
+    position:relative;
+}
+
+.hero,
+.board,
+.booking-card{
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+}
+
+
+.entry{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding: 16px 18px;
+  text-decoration:none;
+  color: var(--ivory);
+  border-bottom: 1px solid rgba(212,175,55,0.18);
+  position:relative;
+  transition: background 0.25s ease, transform 0.25s ease, padding-left 0.25s ease, box-shadow 0.25s ease;
+}
+.entry:last-child{ border-bottom:none; }
+
+.entry:hover{
+
+background:
+rgba(212,175,55,.10);
+
+border-left:4px solid var(--gold);
+
+padding-left:28px;
+
+}
+
+.entry .plate{
+    width:44px;
+    height:44px;
+    flex:0 0 auto;
+    border-radius:0;
+    border:none;
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    box-shadow:none;
+}
+
+.entry .plate img{
+    width:34px;
+    height:34px;
+    object-fit:contain;
+    display:block;
+}
+
+.entry .info{ flex:1; }
+
+.entry .info .name{
+  font-family:'Cormorant Garamond', serif;
+  font-weight:600;
+  font-size:20px;
+  line-height:1.1;
+}
+
+.entry .info .hint{
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color: rgba(246,241,228,0.6);
+  margin-top:4px;
+}
+
+.entry .arrow{
+  display:inline-block;
+  flex:0 0 auto;
+  font-size:18px;
+  line-height:1;
+  color: var(--gold-soft);
+  transition: transform 0.25s ease;
+}
+.entry:hover .arrow{ transform: translateX(4px); }
+
+/* ============================================================
+   BOOKING PLATFORMS (icon + label cards)
+   ============================================================ */
+.booking-icons{
+    width:100%;
+    max-width:630px;      /* sama lebar dengan board review */
+    margin:10px auto 0;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+@media (max-width:768px){
+
+    .booking-icons{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+.booking-card{
+    height:115px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    background:rgba(75,16,38,.65);
+
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:12px;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+.booking-card:hover{
+
+    background:rgba(212,175,55,.18);
+
+    border-color:var(--gold);
+
+    transform:translateY(-5px);
+
+}
+
+.booking-logo{
+  width:44px;
+  height:44px;
+  flex:0 0 auto;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.booking-logo img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    display:block;
+    background:transparent;
+}
+
+.booking-name{
+  font-size:11px;
+  letter-spacing:0.05em;
+  text-align:center;
+  line-height:1.2;
+  color: rgba(246,241,228,0.85);
+  white-space:nowrap;
+}
+
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{
+    margin-top:34px;
+
+    color:rgba(255,255,255,.55);
+
+    letter-spacing:.18em;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:420px){
+  body{ background-attachment: scroll; padding: 28px 14px 60px; }
+  .hero{ padding: 28px 18px 32px; }
+  .entry{ padding:14px 14px; gap:12px; }
+  .entry:hover{ padding-left:18px; }
+  .entry .plate{ width:40px; height:40px; }
+  .entry .info .name{ font-size:18px; }
+  .booking-icons{ grid-template-columns: repeat(2, 1fr); gap:10px; }
+  .booking-name{ font-size:10.5px; white-space:normal; }
+}
+
