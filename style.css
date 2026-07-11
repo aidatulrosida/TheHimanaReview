@@ -436,7 +436,9 @@ footer{
 
 /* ==========================================================
    RESPONSIVE
-   /* Desktop */
+/* ===================== DESKTOP ====================== */
+/* Desktop */
+/* Desktop */
 @media (min-width:769px){
     body{
         background-size: cover;
