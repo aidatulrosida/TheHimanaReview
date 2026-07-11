@@ -202,7 +202,7 @@ h1 span{
 }
 
 .thanks{
-  font-size:15.5px;
+  font-size:20px;
   line-height:1.75;
   color: rgba(246,241,228,0.85);
   max-width:380px;
@@ -337,17 +337,19 @@ padding-left:28px;
 .entry .info{ flex:1; }
 
 .entry .info .name{
-  font-family:'Cormorant Garamond', serif;
+  font-family:'Jost', sans-serif;
   font-weight:600;
-  font-size:20px;
-  line-height:1.1;
+  font-size:14px;
+  line-height:1.2;
+  letter-spacing:0.02em;
+  color: var(--ivory);
 }
 
 .entry .info .hint{
-  font-size:11px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color: rgba(246,241,228,0.6);
+  font-size:15px;
+  letter-spacing:0.01em;
+  text-transform:none;
+  color: rgba(246,241,228,0.72);
   margin-top:4px;
 }
 
@@ -366,80 +368,57 @@ padding-left:28px;
    ============================================================ */
 .booking-icons{
     width:100%;
-    max-width:630px;      /* sama lebar dengan board review */
-    margin:10px auto 0;
+    max-width:520px;
+    margin:12px auto 0;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap:18px;
+    justify-content:center;
+    justify-items:center;
+    padding-inline:6px;
 }
 
 @media (max-width:768px){
 
     .booking-icons{
         grid-template-columns:repeat(2,1fr);
+        max-width:100%;
     }
 
 }
 
-.booking-card{
-    height:115px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    gap:10px;
-
-    text-decoration:none;
-
-    background:rgba(75,16,38,.65);
-
-    border:1px solid rgba(212,175,55,.25);
-    border-radius:12px;
-
-    transition:.3s;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.18);
-}
-
-.booking-card:hover{
-
-    background:rgba(212,175,55,.18);
-
-    border-color:var(--gold);
-
-    transform:translateY(-5px);
-
-}
-
 .booking-logo{
-  width:44px;
-  height:44px;
+  width:52px;
+  height:52px;
   flex:0 0 auto;
-  border-radius:8px;
+  border-radius:12px;
   display:flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
+  margin:0 auto;
 }
 
 .booking-logo img{
-    width:42px;
-    height:42px;
+    width:46px;
+    height:46px;
     object-fit:contain;
     display:block;
+    margin:0 auto;
     background:transparent;
 }
 
 .booking-name{
-  font-size:11px;
-  letter-spacing:0.05em;
+  display:block;
+  width:100%;
+  margin:0 auto;
+  font-size:12px;
+  letter-spacing:0.08em;
   text-align:center;
   line-height:1.2;
-  color: rgba(246,241,228,0.85);
-  white-space:nowrap;
+  color: rgba(246,241,228,0.95);
+  white-space:normal;
 }
 
 
@@ -559,24 +538,76 @@ h1 span{
 .booking-icons{
     grid-template-columns:repeat(2,1fr);
     gap:10px;
+    justify-items:center;
 }
 
 .booking-card{
-    height:82px;
+    min-height:110px;
+    width:100%;
+    max-width:260px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    gap:12px;
+    padding:14px 12px;
+
+    text-decoration:none;
+    background:rgba(75,16,38,.78);
+    border:1px solid rgba(212,175,55,.28);
+    border-radius:16px;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    box-shadow:0 10px 24px rgba(0,0,0,.22);
+}
+
+.booking-card:hover{
+    background:rgba(212,175,55,.18);
+    border-color:var(--gold);
+    transform:translateY(-5px);
 }
 
 .booking-logo{
-    width:30px;
-    height:30px;
+    width:46px;
+    height:46px;
+    flex:0 0 auto;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    margin:0 auto;
 }
 
 .booking-logo img{
-    width:24px;
-    height:24px;
+    width:36px;
+    height:36px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto;
+    background:transparent;
 }
 
 .booking-name{
-    font-size:.65rem;
+    font-size:13px;
+    letter-spacing:0.08em;
+    text-align:center;
+    line-height:1.2;
+    color: rgba(246,241,228,0.95);
+    white-space:normal;
+}
+
+@media (min-width: 769px){
+    body{
+        background-possition: center;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        background-position: left center;
+    }
 }
 
 /* Footer */
