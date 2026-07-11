@@ -202,7 +202,7 @@ h1 span{
 }
 
 .thanks{
-  font-size:20px;
+  font-size:18px;
   line-height:1.75;
   color: rgba(246,241,228,0.85);
   max-width:380px;
@@ -436,14 +436,11 @@ footer{
 
 /* ==========================================================
    RESPONSIVE
-   Layout mobile sama seperti desktop,
-   hanya posisi background yang berbeda.
-========================================================== */
-
-/* ===================== DESKTOP ====================== */
+/* Desktop */
 /* Desktop */
 @media (min-width:769px){
     body{
+        background-size: cover;
         background-position: center center;
     }
 }
@@ -451,7 +448,8 @@ footer{
 /* Mobile */
 @media (max-width:768px){
     body{
-        background-position: 25% center;
+        background-size: 115%;
+        background-position: 30% center;
     }
 }
 
