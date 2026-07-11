@@ -436,186 +436,27 @@ footer{
 
 /* ==========================================================
    RESPONSIVE
+   Layout mobile sama seperti desktop,
+   hanya posisi background yang berbeda.
 ========================================================== */
 
-/* ===================== TABLET ====================== */
-/* ===================== MOBILE ====================== */
-
-@media screen and (max-width:480px){
-
-html{
-    font-size:14px;
-}
-
-body{
-    padding:12px;
-}
-
-.stage{
-    width:100%;
-    max-width:340px;
-    margin:auto;
-}
-
-/* Logo */
-
-.fob{
-    width:48px;
-    height:64px;
-}
-
-.logo-img{
-    width:36px;
-    height:36px;
-    top:15px;
-}
-
-/* Hero */
-
-.hero{
-    padding:16px 14px;
-    border-radius:12px;
-}
-
-h1{
-    font-size:2rem !important;
-    line-height:1;
-}
-
-h1 span{
-    font-size:.7rem;
-    letter-spacing:.18em;
-}
-
-.stars{
-    font-size:12px;
-    margin:10px 0;
-}
-
-.thanks{
-    font-size:.85rem;
-    line-height:1.55;
-}
-
-/* Label */
-
-.directory-label{
-    margin:14px 0 10px;
-    font-size:.55rem;
-}
-
-/* Review */
-
-.entry{
-    padding:10px;
-    gap:8px;
-}
-
-.entry .plate{
-    width:34px;
-    height:34px;
-}
-
-.entry .plate img{
-    width:22px;
-    height:22px;
-}
-
-.entry .info .name{
-    font-size:1.15rem;
-}
-
-.entry .info .hint{
-    font-size:.62rem;
-}
-
-.entry .arrow{
-    font-size:15px;
-}
-
-/* Booking */
-
-.booking-icons{
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-    justify-items:center;
-}
-
-.booking-card{
-    min-height:110px;
-    width:100%;
-    max-width:260px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    gap:12px;
-    padding:14px 12px;
-
-    text-decoration:none;
-    background:rgba(75,16,38,.78);
-    border:1px solid rgba(212,175,55,.28);
-    border-radius:16px;
-    transition: transform .2s ease, border-color .2s ease, background .2s ease;
-    box-shadow:0 10px 24px rgba(0,0,0,.22);
-}
-
-.booking-card:hover{
-    background:rgba(212,175,55,.18);
-    border-color:var(--gold);
-    transform:translateY(-5px);
-}
-
-.booking-logo{
-    width:46px;
-    height:46px;
-    flex:0 0 auto;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    margin:0 auto;
-}
-
-.booking-logo img{
-    width:36px;
-    height:36px;
-    object-fit:contain;
-    display:block;
-    margin:0 auto;
-    background:transparent;
-}
-
-.booking-name{
-    font-size:13px;
-    letter-spacing:0.08em;
-    text-align:center;
-    line-height:1.2;
-    color: rgba(246,241,228,0.95);
-    white-space:normal;
-}
-
-@media (min-width: 769px){
+/* ===================== DESKTOP ====================== */
+@media (min-width:769px){
     body{
-        background-possition: center;
+        background-position: center center;
     }
 }
 
-@media (max-width: 768px){
+/* ===================== MOBILE ====================== */
+@media (max-width:768px){
     body{
         background-position: left center;
     }
 }
-
 /* Footer */
 
 footer{
     margin-top:18px;
     font-size:.65rem;
     text-align:center;
-}
-
 }
