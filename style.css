@@ -441,16 +441,17 @@ footer{
 ========================================================== */
 
 /* ===================== DESKTOP ====================== */
+/* Desktop */
 @media (min-width:769px){
     body{
         background-position: center center;
     }
 }
 
-/* ===================== MOBILE ====================== */
+/* Mobile */
 @media (max-width:768px){
     body{
-        background-position: left center;
+        background-position: 25% center;
     }
 }
 
