@@ -436,21 +436,21 @@ footer{
 
 /* ==========================================================
    RESPONSIVE
+   Layout mobile sama seperti desktop,
+   hanya posisi background yang berbeda.
+========================================================== */
+
 /* ===================== DESKTOP ====================== */
-/* Desktop */
-/* Desktop */
 @media (min-width:769px){
     body{
-        background-size: cover;
         background-position: center center;
     }
 }
 
-/* Mobile */
+/* ===================== MOBILE ====================== */
 @media (max-width:768px){
     body{
-        background-size: 115%;
-        background-position: 30% center;
+        background-position: left center;
     }
 }
 
